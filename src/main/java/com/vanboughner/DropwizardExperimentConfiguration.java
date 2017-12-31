@@ -31,4 +31,30 @@ public class DropwizardExperimentConfiguration extends Configuration {
     public void setDefaultName(String name) {
         this.defaultName = name;
     }
+
+    @NotEmpty
+    private String weatherTemplate;
+
+    @NotEmpty
+    private String defaultWeather = "Partly Cloudy";
+
+    @JsonProperty
+    public String getWeatherTemplate() {
+        return weatherTemplate;
+    }
+
+    @JsonProperty
+    public void setWeatherTemplate(String weatherTemplate) {
+        this.weatherTemplate = weatherTemplate;
+    }
+
+    @JsonProperty
+    public String getDefaultWeather() {
+        return defaultWeather;
+    }
+
+    @JsonProperty
+    public void setDefaultWeather(String weather) {
+        this.defaultWeather = weather;
+    }
 }

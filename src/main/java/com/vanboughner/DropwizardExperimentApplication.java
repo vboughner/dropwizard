@@ -2,6 +2,7 @@ package com.vanboughner;
 
 import com.vanboughner.health.TemplateHealthCheck;
 import com.vanboughner.resources.HelloWorldResource;
+import com.vanboughner.resources.WeatherResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -29,9 +30,16 @@ public class DropwizardExperimentApplication extends Application<DropwizardExper
             configuration.getTemplate(),
             configuration.getDefaultName()
         );
+        environment.jersey().register(resource);
+
+        final WeatherResource weatherResource = new WeatherResource(
+            configuration.getWeatherTemplate(),
+            configuration.getDefaultWeather()
+        );
+        environment.jersey().register(weatherResource);
+
         final TemplateHealthCheck healthCheck =
                 new TemplateHealthCheck(configuration.getTemplate());
         environment.healthChecks().register("template", healthCheck);
-        environment.jersey().register(resource);
     }
 }

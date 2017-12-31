@@ -1,2 +1,5 @@
 template: Hello, %s!
 defaultName: Van
+
+weatherTemplate: Today the weather will be %s.
+defaultWeather: Sunny
