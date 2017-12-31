@@ -1,6 +1,6 @@
-package io.dropwizard.resources;
+package com.vanboughner.resources;
 
-import io.dropwizard.api.Saying;
+import com.vanboughner.api.Saying;
 import com.codahale.metrics.annotation.Timed;
 
 import javax.ws.rs.GET;

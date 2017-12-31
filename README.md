@@ -7,7 +7,7 @@ a framework for serving REST api with Java, using JETTY, Jersey, and Jackson
 
 mvn clean install
 
-java -jar target/dropwizard-tutorial-1.0-SNAPSHOT.jar server hello-world.yml
+java -jar target/dropwizard-experiment-1.0-SNAPSHOT.jar server van-experiment.yml
 
 Look in browser at [Hello](http://localhost:8080/hello-world) or
 [Hello w/name](http://localhost:8080/hello-world?name=Successful+Dropwizard+User)

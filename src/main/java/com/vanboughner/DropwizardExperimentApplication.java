@@ -1,29 +1,29 @@
-package io.dropwizard;
+package com.vanboughner;
 
+import com.vanboughner.health.TemplateHealthCheck;
+import com.vanboughner.resources.HelloWorldResource;
 import io.dropwizard.Application;
-import io.dropwizard.health.TemplateHealthCheck;
-import io.dropwizard.resources.HelloWorldResource;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
-public class DropwizardTutorialApplication extends Application<DropwizardTutorialConfiguration> {
+public class DropwizardExperimentApplication extends Application<DropwizardExperimentConfiguration> {
 
     public static void main(final String[] args) throws Exception {
-        new DropwizardTutorialApplication().run(args);
+        new DropwizardExperimentApplication().run(args);
     }
 
     @Override
     public String getName() {
-        return "DropwizardTutorial";
+        return "DropwizardExperiment";
     }
 
     @Override
-    public void initialize(final Bootstrap<DropwizardTutorialConfiguration> bootstrap) {
+    public void initialize(final Bootstrap<DropwizardExperimentConfiguration> bootstrap) {
         // TODO: application initialization
     }
 
     @Override
-    public void run(final DropwizardTutorialConfiguration configuration,
+    public void run(final DropwizardExperimentConfiguration configuration,
                     final Environment environment) {
         final HelloWorldResource resource = new HelloWorldResource(
             configuration.getTemplate(),

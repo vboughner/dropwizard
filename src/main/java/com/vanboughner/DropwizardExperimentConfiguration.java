@@ -1,11 +1,11 @@
-package io.dropwizard;
+package com.vanboughner;
 
 import io.dropwizard.Configuration;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.validator.constraints.*;
 import javax.validation.constraints.*;
 
-public class DropwizardTutorialConfiguration extends Configuration {
+public class DropwizardExperimentConfiguration extends Configuration {
     @NotEmpty
     private String template;
 

@@ -1,4 +1,4 @@
-package io.dropwizard.health;
+package com.vanboughner.health;
 
 import com.codahale.metrics.health.HealthCheck;
 
